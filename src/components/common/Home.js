@@ -5,7 +5,7 @@ const Home = (props) => {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    setName("VAIBHV");
+    setName("KS");
   }, []);
 
   return <div style={{ textAlign: "center" }}>Welcome to My Canteen Portal - {name}</div>;
