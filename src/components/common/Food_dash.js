@@ -93,7 +93,7 @@ const StyledRating = styled(Rating)({
 });
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/user")
+      .get("https://canteen-backend-j8zw.onrender.com/api/user")
       .then((response) => {
         setUsers(response.data);
         setSortedUsers(response.data);
@@ -139,7 +139,7 @@ const StyledRating = styled(Rating)({
       item_addon2,
     };
     console.log(new_user);
-    axios.post("http://localhost:4000/api/user/editfood", new_user).then((response) => {
+    axios.post("https://canteen-backend-j8zw.onrender.com/api/user/editfood", new_user).then((response) => {
       alert("Food Updated");
     });
     // window.location.reload();
@@ -240,7 +240,7 @@ const StyledRating = styled(Rating)({
                         }} > Edit</Button></TableCell>
                       <TableCell> <Button variant="contained" onClick={() =>{
                         axios
-                          .post('http://localhost:4000/api/user/delfood',user)
+                          .post('https://canteen-backend-j8zw.onrender.com/api/user/delfood',user)
                           .then((response) => {
                             alert("Deleted");
                           })

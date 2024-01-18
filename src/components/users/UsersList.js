@@ -28,7 +28,7 @@ const UsersList = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/user")
+      .get("https://canteen-backend-j8zw.onrender.com/api/user")
       .then((response) => {
         setUsers(response.data);
         setSortedUsers(response.data);

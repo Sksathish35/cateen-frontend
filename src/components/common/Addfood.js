@@ -240,7 +240,7 @@ const names = [
         };
         console.log(newUser);
         axios
-        .post("http://localhost:4000/api/user/addfood", newUser)
+        .post("https://canteen-backend-j8zw.onrender.com/api/user/addfood", newUser)
         .then((response) => {
             // localStorage.setItem("user", JSON.stringify(response.data));
             console.log(response.data);

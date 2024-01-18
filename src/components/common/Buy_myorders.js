@@ -46,7 +46,7 @@ const Vendor_orders = (props) => {
   const [rating,setrating] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/user")
+      .get("https://canteen-backend-j8zw.onrender.com/api/user")
       .then((response) => {
         setUsers(response.data);
         setSortedUsers(response.data);
@@ -144,7 +144,7 @@ const Vendor_orders = (props) => {
                             };
                             // console.log(order);
                             axios
-                            .post("http://localhost:4000/api/user/updatefoodordertocomplete", order)
+                            .post("https://canteen-backend-j8zw.onrender.com/api/user/updatefoodordertocomplete", order)
                             .then((response) => {
                                 // localStorage.setItem("user", JSON.stringify(response.data));
                                 // console.log(response.data);
@@ -176,7 +176,7 @@ const Vendor_orders = (props) => {
                         };
                         // console.log(fr_rating)
                         axios
-                        .post("http://localhost:4000/api/user/updaterating", fr_rating)
+                        .post("https://canteen-backend-j8zw.onrender.com/api/user/updaterating", fr_rating)
                         .then((response) => {
                             // localStorage
                             // console.log(response.data);

@@ -60,7 +60,7 @@ const Login = (props) => {
     };
 
     axios
-      .post("http://localhost:4000/api/user/login", newUser)
+      .post("https://canteen-backend-j8zw.onrender.com/api/user/login", newUser)
       .then((response) => {
         // alert(response.data.alertt);
         const resp = response.data;

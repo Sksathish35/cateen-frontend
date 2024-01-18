@@ -5,7 +5,7 @@ const Profile = (props) => {
   const [details, setDetails] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/profile") // unimplemented
+      .get("https://canteen-backend-j8zw.onrender.com/api/profile") // unimplemented
       .then((response) => {
         setDetails(response.data);
       })

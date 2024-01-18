@@ -162,7 +162,7 @@ const Profile = (props) => {
         };
         console.log(newUser);
         axios
-        .post("http://localhost:4000/api/user/profedit", newUser)
+        .post("https://canteen-backend-j8zw.onrender.com/api/user/profedit", newUser)
         .then((response) => {
             localStorage.setItem("user", JSON.stringify(response.data));
             resetInputs();

@@ -114,7 +114,7 @@ const Food_dash = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/user")
+      .get("https://canteen-backend-j8zw.onrender.com/api/user")
       .then((response) => {
         setUserss(response.data);
       })
@@ -206,7 +206,7 @@ const add_money = (event) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/user")
+      .get("https://canteen-backend-j8zw.onrender.com/api/user")
       .then((response) => {
         setUsers(response.data);
         setSortedUsers(response.data);
@@ -221,7 +221,7 @@ const add_money = (event) => {
       }
       console.log(ordd);
     axios
-      .post("http://localhost:4000/api/user/updatewalletlocal", ordd)
+      .post("https://canteen-backend-j8zw.onrender.com/api/user/updatewalletlocal", ordd)
       .then((response) => {
         localStorage.setItem("wallet",response.data.wallet);
       })
@@ -322,10 +322,10 @@ const ITEM_PADDING_TOP = 8;
       // window.location.reload();
     } 
     else if(new_user.item_totalprice <= localStorage.getItem("wallet")){
-      axios.post("http://localhost:4000/api/user/updatewallet", new_user2 ).then((response => {
+      axios.post("https://canteen-backend-j8zw.onrender.com/api/user/updatewallet", new_user2 ).then((response => {
         localStorage.setItem("wallet",new_user2.wallet);
       }))
-      axios.post("http://localhost:4000/api/user/orderfood", new_user).then((response) => {
+      axios.post("https://canteen-backend-j8zw.onrender.com/api/user/orderfood", new_user).then((response) => {
         alert("FOOD ORDER DONE");
         window.location = "/buy_myorders";
       });
@@ -490,7 +490,7 @@ const ITEM_PADDING_TOP = 8;
               email : localStorage.getItem("email"),
               wallet : localStorage.getItem("wallet"),
             };
-            axios.post("http://localhost:4000/api/user/addmoney", new_user).then((response) => {
+            axios.post("https://canteen-backend-j8zw.onrender.com/api/user/addmoney", new_user).then((response) => {
               alert("MONEY ADDED");
               // window.location.reload();
           });

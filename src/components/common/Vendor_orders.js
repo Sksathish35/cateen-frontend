@@ -34,7 +34,7 @@ const Vendor_orders = (props) => {
   // const [cor] = useState(0);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/user")
+      .get("https://canteen-backend-j8zw.onrender.com/api/user")
       .then((response) => {
         setUsers(response.data);
         setSortedUsers(response.data);
@@ -119,7 +119,7 @@ const Vendor_orders = (props) => {
                             if(localStorage.getItem("curcount") < 10){
                                   
                                 axios 
-                                .post("http://localhost:4000/api/user/updatecountfororder", updatecurcount)
+                                .post("https://canteen-backend-j8zw.onrender.com/api/user/updatecountfororder", updatecurcount)
                                 .then((response) => {
                                   localStorage.setItem("curcount",+localStorage.getItem("curcount")+1); 
                                     console.log(response.data);
@@ -128,7 +128,7 @@ const Vendor_orders = (props) => {
                                     alert("Failed!!!!");
                                 })  
                                 axios
-                                .post("http://localhost:4000/api/user/updatefoodordertoaccept", order)
+                                .post("https://canteen-backend-j8zw.onrender.com/api/user/updatefoodordertoaccept", order)
                                 .then((response) => {
                                     console.log(response.data);
                                     // emailjs.send("service_34vma9a","template_pyqu8xg",{
@@ -168,7 +168,7 @@ const Vendor_orders = (props) => {
                             };
                             
                             axios
-                            .post("http://localhost:4000/api/user/updatefoodordertoreject", order)
+                            .post("https://canteen-backend-j8zw.onrender.com/api/user/updatefoodordertoreject", order)
                             .then((response) => {
                                 // localStorage.setItem("user", JSON.stringify(response.data));
                                 console.log(response.data);
@@ -189,7 +189,7 @@ const Vendor_orders = (props) => {
                                 alert("Failed!!!!");
                             })
                             axios
-                            .post("http://localhost:4000/api/user/returnmoney", order)
+                            .post("https://canteen-backend-j8zw.onrender.com/api/user/returnmoney", order)
                             .then((response) => {
                               // localStorage.setItem("wallet",response.data.wallet);
                                 // localStorage.setItem("user", JSON.stringify(response.data));
@@ -214,7 +214,7 @@ const Vendor_orders = (props) => {
                               id : user._id
                             };
                             axios
-                            .post("http://localhost:4000/api/user/updatefoodordertocooking", order)
+                            .post("https://canteen-backend-j8zw.onrender.com/api/user/updatefoodordertocooking", order)
                             .then((response) => {
                                 // localStorage.setItem("user", JSON.stringify(response.data));
                                 console.log(response.data);
@@ -237,7 +237,7 @@ const Vendor_orders = (props) => {
                               mailid : localStorage.getItem("user").email 
                             };
                             axios
-                            .post("http://localhost:4000/api/user/updatefoodordertoready", order)
+                            .post("https://canteen-backend-j8zw.onrender.com/api/user/updatefoodordertoready", order)
                             .then((response) => {
                                 // localStorage.setItem("user", JSON.stringify(response.data));
                                 console.log(response.data);
@@ -246,7 +246,7 @@ const Vendor_orders = (props) => {
                                 alert("Failed!!!!");
                             })
                             axios   
-                                .post("http://localhost:4000/api/user/updatecountfororder", updatecurcount)
+                                .post("https://canteen-backend-j8zw.onrender.com/api/user/updatecountfororder", updatecurcount)
                                 .then((response) => {
                                   localStorage.setItem("curcount",+localStorage.getItem("curcount")-1); 
                                     console.log(response.data);

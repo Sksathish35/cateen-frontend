@@ -161,7 +161,7 @@ const Register = (props) => {
     };
 
     axios
-      .post("http://localhost:4000/api/user/register", newUser)
+      .post("https://canteen-backend-j8zw.onrender.com/api/user/register", newUser)
       .then((response) => {
         alert("Created\t" + response.data.name);
         console.log(response.data);
